@@ -139,3 +139,4 @@
     - nginx
     - php5-fpm
 
+- copy: src=/srv/owncloud/data/.ocdata dest=/media/owncloud owner=owncloud group=owncloud mode=0777
