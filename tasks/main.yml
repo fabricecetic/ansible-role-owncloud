@@ -139,4 +139,7 @@
     - nginx
     - php5-fpm
 
-- copy: src=/srv/owncloud/data/.ocdata dest=/media/owncloud owner=owncloud group=owncloud mode=0777
+- name: create (empty) owncloud data file in shared folder
+  command: touch /media/owncloud/.ocdata
+  args:
+    creates: /media/owncloud/.ocdata
