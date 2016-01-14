@@ -12,6 +12,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: 8080, host: 8080, 
     auto_correct: false
 
+  config.vm.network "private_network", ip: "192.168.29.5"
+  config.vm.hostname = "dbowncloud.dev"
+
+  config.vm.synced_folder "/media/owncloud", "/media/owncloud", type: "nfs"
+
   config.vm.provider "virtualbox" do |v|
     v.memory = 1280
   end

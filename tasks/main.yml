@@ -139,3 +139,7 @@
     - nginx
     - php5-fpm
 
+- name: create (empty) owncloud data file in shared folder
+  command: touch /media/owncloud/.ocdata
+  args:
+    creates: /media/owncloud/.ocdata
